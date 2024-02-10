@@ -1,52 +1,59 @@
 ﻿
 using task6;
-
 try
 {
     Library library = new Library();
-while(true)
-{
-    System.Console.WriteLine("Read");
-    System.Console.WriteLine("Update");
-    System.Console.WriteLine("Delete");
-    System.Console.WriteLine("Create");
-    System.Console.WriteLine("Get out");
-    string a = Console.ReadLine();
-    if (a == "Create" || a == "create" || a == "CREATE")
+    while (true)
     {
-        Book book = new Book();
-        book.Id = Convert.ToInt32(Console.ReadLine());
-        book.Title = Console.ReadLine();
-        book.Author = Console.ReadLine();
-        library.AddBook(book);
-    }
-    if (a == "Read" || a == "read" || a == "READ")
-    {
-        foreach (var item in library.DisplayBook())
+        System.Console.WriteLine("Create");
+        System.Console.WriteLine("Read");
+        System.Console.WriteLine("Update");
+        System.Console.WriteLine("Delete");
+        System.Console.WriteLine("exit");
+        string a = Console.ReadLine().ToUpper();
+        if (a == "CREATE")
         {
-            System.Console.WriteLine(item.Id);
-            System.Console.WriteLine(item.Title);
-            System.Console.WriteLine(item.Author);
-            System.Console.WriteLine("-------------------------");
+            Book book = new Book();
+            System.Console.WriteLine("!type book's id=>");
+            book.Id = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("!type book's title=>");
+            book.Title = Console.ReadLine();
+            System.Console.WriteLine("!type book's author=>");
+            book.Author = Console.ReadLine();
+            library.AddBook(book);
         }
+        if (a == "READ")
+        {
+            foreach (var item in library.DisplayBook())
+            {
+                System.Console.WriteLine("Book's id: " + item.Id);
+                System.Console.WriteLine("Book's id: " + item.Title);
+                System.Console.WriteLine("Book's id: " + item.Author);
+                System.Console.WriteLine("-------------------------");
+            }
+        }
+        if (a == "DELETE")
+        {
+            System.Console.WriteLine("!type id for deleting=>");
+            int id = Convert.ToInt32(Console.ReadLine());
+            library.DeleteBook(id);
+        }
+        if (a == "UPDATE")
+        {
+
+            Book book1 = new Book();
+            System.Console.WriteLine("!type book's id=>");
+            book1.Id = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("!type book's title=>");
+            book1.Title = Console.ReadLine();
+            System.Console.WriteLine("!type book's author=>");
+            book1.Author = Console.ReadLine();
+            library.UpdateBook(book1);
+        }
+        if (a == "EXIT") break;
     }
-    if (a == "DELETE" || a == "Delete" || a == "delete")
-    {
-        int i = Convert.ToInt32(Console.ReadLine());
-        library.DeleteBook(i);
-    }
-    if (a == "Update" || a == "UPDATE" || a == "update")
-    {
-        Book book1 = new Book();
-        book1.Id = Convert.ToInt32(Console.ReadLine());
-        book1.Title = Console.ReadLine();
-        book1.Author = Console.ReadLine();
-        library.UpdateBook(book1);
-    }
-    if (a == "get out" || a == "Get out") break;
-}
 }
 catch
 {
-    System.Console.WriteLine("Error");
+    System.Console.WriteLine("Error in inputing something");
 }

@@ -6,22 +6,21 @@ public class Library : ILibrary
     public void AddBook(Book book)
     {
         books.Add(book);
+        System.Console.WriteLine("Successfully added");
     }
-    public string DeleteBook(int id)
+    public void DeleteBook(int id)
     {
-       if (books.Count > 0)
-       {
-         foreach (var item in books)
+        try
         {
-            if (item.Id == id)
-            {
-            books.Remove(item);
-            }
-            else return"Not found";
+            var book = books.FirstOrDefault(e => e.Id == id);
+            books.Remove(book);
+            System.Console.WriteLine("Successfully deleted");
         }
-        return "Deleted";
-       }
-       else return "Nothing";
+        catch
+        {
+            System.Console.WriteLine("List of Books is empty");
+        }
+        
     }
 
     public List<Book> DisplayBook()
@@ -41,23 +40,19 @@ public class Library : ILibrary
         return book;
     }
 
-    public string UpdateBook(Book newBook)
+    public void UpdateBook(Book book)
     {
-        if (books.Count > 0)
+        try
         {
-            foreach (var item in books)
+            var _book = books.FirstOrDefault(e => e.Id == book.Id);
+            _book.Author = book.Author;
+            _book.Title = book.Title;
+            System.Console.WriteLine("Successfully updated");
+        }
+        catch
         {
-            if (item.Id == newBook.Id)
-            {
-                item.Title = newBook.Title;
-                item.Author = newBook.Author;
-                
-            }
-            return "Not found";
+            System.Console.WriteLine("this list of books is empty");
         }
-        return "Updated";
-        }
-        return "Nothing";
     }
 
 }

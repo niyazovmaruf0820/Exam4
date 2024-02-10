@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL USA\\Desktop\\C#\\Exam4\\task2\\task2.csproj": {}
+    "C:\\Users\\DELL USA\\Desktop\\C#\\Month2\\Week4\\Exam4\\task2\\task2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL USA\\Desktop\\C#\\Exam4\\task2\\task2.csproj": {
+    "C:\\Users\\DELL USA\\Desktop\\C#\\Month2\\Week4\\Exam4\\task2\\task2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL USA\\Desktop\\C#\\Exam4\\task2\\task2.csproj",
+        "projectUniqueName": "C:\\Users\\DELL USA\\Desktop\\C#\\Month2\\Week4\\Exam4\\task2\\task2.csproj",
         "projectName": "task2",
-        "projectPath": "C:\\Users\\DELL USA\\Desktop\\C#\\Exam4\\task2\\task2.csproj",
+        "projectPath": "C:\\Users\\DELL USA\\Desktop\\C#\\Month2\\Week4\\Exam4\\task2\\task2.csproj",
         "packagesPath": "C:\\Users\\DELL USA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL USA\\Desktop\\C#\\Exam4\\task2\\obj\\",
+        "outputPath": "C:\\Users\\DELL USA\\Desktop\\C#\\Month2\\Week4\\Exam4\\task2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL USA\\AppData\\Roaming\\NuGet\\NuGet.Config"

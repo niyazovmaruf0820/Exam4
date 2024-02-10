@@ -9,13 +9,13 @@ public class Stack<T>
     }
     public T Pop()
     {
-        T value = values[values.Count - 1];
+        T value = values.Last();
         values.Remove(value);
         return value;
     }
     public T Peek()
     {
-        return values[values.Count - 1];
+        return values.Last();
     }
 }
 
